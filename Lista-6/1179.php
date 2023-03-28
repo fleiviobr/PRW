@@ -12,7 +12,21 @@ for ($i = 0; $i < 15; $i++) {
 }
 
 for ($i = 0; $i < 15; $i++) {
-    if
+    if ($pa == 5) {
+            for ($j = 0; $j < 5; $j++) {
+                echo "par[$j] = $par[$j]" . PHP_EOL;
+            }
+            $pa = 0;
+        }
+    
+
+    if ($im == 5) {
+        for ($j = 0; $j < 5; $j++) {
+            echo "impar[$j] = $imp[$j]" . PHP_EOL;
+        }
+        $im = 0;
+    }
+
     if ($x[$i] % 2.0 == 0.0) {
         $par = $x[$i];
         $pa++;
@@ -21,7 +35,11 @@ for ($i = 0; $i < 15; $i++) {
         $im++;
     }
 }
-
-for ($i = 0; $i < 5; $i++) {
-    echo "par[$i] = " . $par[$i] . PHP_EOL;
+for ($j = 0; $j < $im; $j++) {
+    echo "impar[$j] = $imp[$j]" . PHP_EOL;
 }
+for ($j = 0; $j < $pa; $j++) {
+    echo "par[$j] = $par[$j]" . PHP_EOL;
+}
+
+?>
